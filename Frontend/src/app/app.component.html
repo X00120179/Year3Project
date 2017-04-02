@@ -36,8 +36,11 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/login/" class="login">Login</a></li>
-                <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/register/" class="register">Register</a></li>
-                <a routerLink="/cart/" type="button" class="btn btn-default navbar-btn pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a>
+                <li *ngIf="!user"><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/register/" class="register">Register</a></li>
+                
+                <li><a routerLink="/cart/" type="button" class="btn btn-default navbar-btn pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                
+                <li *ngIf="user === {}"><a>Hi, {{user.username}}</a></li>
             </ul>
 
         </div> <!-- /.navbar-collapse -->

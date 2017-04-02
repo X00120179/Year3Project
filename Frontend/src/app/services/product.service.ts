@@ -21,13 +21,19 @@ export class ProductService {
 
 
   addProduct(product : Product) : Observable<Product> {
-    return this.http.post(this.productsUrl, product)
+    let headers = new Headers();
+    headers.append("Authorization", "Token " + localStorage.getItem("token"));
+    let options = new RequestOptions({headers: headers});
+    return this.http.post(this.productsUrl, product, options)
                     .map((res:Response) => res.json())
                     .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
   deleteProduct(id : number) {
-    return this.http.delete(this.productsUrl + id + '/')
+    let headers = new Headers();
+    headers.append("Authorization", "Token " + localStorage.getItem("token"));
+    let options = new RequestOptions({headers: headers});
+    return this.http.delete(this.productsUrl + id + '/', options)
                     .map((res:Response) => res.json())
                     .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
 
