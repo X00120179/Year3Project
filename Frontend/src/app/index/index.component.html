@@ -1,7 +1,133 @@
 <div class="container">
-  <div class="jumbotron">
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:250px">
 
-       <h1>Welcome to the index page!</h1>
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
 
+    <!-- Image header -->
+    <div class="w3-display-container w3-container">
+      <img src="app/img/h.jpg" alt="Jeans" style="width:100%">
+      <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+        <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
+        <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+        <h1 class="w3-hide-small">COLLECTION 2017</h1>
+      </div>
+    </div>
+
+    <br>
+
+
+    <!-- Product grid -->
+    <div class="w3-row w3-grayscale">
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="app/img/RSJ.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>€240.99</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="app/img/MRJ.jpg" style="width:100%">
+          <p>Mega Ripped Jeans<br><b>€190.99</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="app/img/MRJ2.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button" a routerLink="/cart/">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Mega Ripped Jeans<br><b>€190.99</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="app/img/WSJ.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>€199.50</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="app/img/WSJ2.jpg" style="width:100%">
+          <p>Washed Skinny Jeans<br><b>€269.50</b></p>
+        </div>
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="app/img/VSJ.jpg" style="width:100%">
+            <span class="w3-tag w3-display-topleft">Sale</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button" a routerLink="/cart/">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>Vintage Skinny Jeans<br><b class="w3-text-red">€89.99</b></p>
+        </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <img src="app/img/VSJ2.jpg" style="width:100%">
+          <p>Vintage Skinny Jeans<br><b>€149.99</b></p>
+        </div>
+        <div class="w3-container">
+          <img src="app/img/RSJ2.jpg" style="width:100%">
+          <p>Ripped Skinny Jeans<br><b>€240.99</b></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribe section -->
+    <div class="w3-container w3-black w3-padding-32">
+      <h1>Subscribe</h1>
+      <p>To get special offers and VIP treatment:</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+      <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+      <div class="w3-row-padding">
+        <div class="w3-col s4">
+          <h4>Contact</h4>
+          <p>Got a question? Contact us below</p>
+          <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+          </form>
+        </div>
+
+        <div class="w3-col s4">
+          <h4>About</h4>
+          <p><a routerLink="/index">About us</a></p>
+          <p><a routerLink="/cart/">Payment</a></p>
+          <p><a href="#">Help</a></p>
+        </div>
+
+        <div class="w3-col s4 w3-justify">
+          <h4>Store</h4>
+          <p><i class="fa fa-fw fa-map-marker"></i> 3rd Year Project</p>
+          <p><i class="fa fa-fw fa-phone"></i> 0871234567</p>
+          <p><i class="fa fa-fw fa-envelope"></i> 3rdyearproject@gmail.com</p>
+          <h4>We accept</h4>
+          <p><i class="fa fa-fw fa-credit-card"></i> Debit Card</p>
+          <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+          <h4>Social Media</h4>
+          <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+          <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+          <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+          <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+          <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="w3-black w3-center w3-padding-24">Copyright © <a routerLink="/index/" title="3rdYear" target="_blank" class="w3-hover-opacity">3rd Year Project</a></div>
+
+    <!-- End page content -->
   </div>
 </div>
