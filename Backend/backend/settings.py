@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
-    'api',
     'shop'
 ]
 
@@ -130,3 +130,15 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
     'localhost:4200'
 )
+
+
+
+# REST FRAMEWORK CONFIG
+REST_FRAMEWORK =  {
+        'DEFAULT_AUTHENTICATION_CLASSES': (
+            'rest_framework.authentication.TokenAuthentication',
+        ),
+        'DEFAULT_PERMISSION_CLASSES': (
+            'rest_framework.permissions.IsAuthenticated',
+        )
+}

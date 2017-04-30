@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from rest_framework.authtoken import views as auth_token_views
 from rest_framework import routers
 
 from shop import views
@@ -29,5 +30,7 @@ router.register('products', views.ProductViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    url(r'^shop-auth/', include('rest_framework.urls', namespace='rest_framework')) 
+    url(r'^shop-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api-token-auth', auth_token_views.obtain_auth_token),
+    url(r'^user', views.CurrentUserView.as_view()),
 ]
