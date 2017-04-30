@@ -13,8 +13,6 @@
     />
 </head>
 
-
-
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,28 +20,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    .w3-sidebar a {
-        font-family: "Roboto", sans-serif
-    }
-    
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .w3-wide {
-        font-family: "Montserrat", sans-serif;
-    }
-</style>
-
-
-
-
-
-
 
 <body class="w3-content" style="max-width:1200px">
 
@@ -92,34 +68,25 @@
             </button>
                     <a class="navbar-brand" routerLink="/index/">3rd Year Project</a>
                 </div>
-                <!-- /.navbar-header -->
+          
+         <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               
+    
 
-<<<<<<< HEAD
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-=======
-            <ul class="nav navbar-nav navbar-right">
-                <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/login/" class="login">Login</a></li>
-                <li *ngIf="!user"><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/register/" class="register">Register</a></li>
-                
-                <li><a routerLink="/cart/" type="button" class="btn btn-default navbar-btn pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
-                
-                <li *ngIf="user === {}"><a>Hi, {{user.username}}</a></li>
-            </ul>
->>>>>>> 7c7eb3fd42e8a672d3955597d81dd2f09164f6f5
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/login/" class="login">Login</a></li>
+                            <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/register/" class="register">Register</a></li>
+                            <a routerLink="/cart/" type="button" class="btn btn-default navbar-btn pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a>
+                        </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/login/" class="login">Login</a></li>
-                        <li><a type="button" class="btn btn-default navbar-btn pull-right" routerLink="/register/" class="register">Register</a></li>
-                        <a routerLink="/cart/" type="button" class="btn btn-default navbar-btn pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a>
-                    </ul>
-
-                </div>
-                <!-- /.navbar-collapse -->
+                    </div>
+                 
             </div>
-            <!-- /.container -->
+         
 
         </nav>
     </div>
 </body>
+</html>
 <router-outlet></router-outlet>
